@@ -1,0 +1,257 @@
+{
+  "program": {
+    "fileInfos": {
+      "../src/shared/module.ts": {
+        "version": "5b26ad20c7e7ca213cb5924429c35a3716e2a19640a02e579b4ea55242c8cdfa",
+        "affectsGlobalScope": false
+      },
+      "../src/client/main.client.ts": {
+        "version": "8c875200e240dad46ccf5f7ac9d923d39c0919cc66f2cf920e4c13cdc3e88a87",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@rbxts/services/index.d.ts": {
+        "version": "f5b521519568e3dcb6f8cf871438e29aa5f7968a017be88929983a43b801451b",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/customisableconfig.ts": {
+        "version": "b679610c245cc9dc940400dd7140c367fd5ed697791d952677e701fdea6924ba",
+        "affectsGlobalScope": false
+      },
+      "../src/client/guihandler/gamepassclient.ts": {
+        "version": "dcdbe5e1b0d863cabdc3dcce9104665e37443b4939a14b55d91123cd09f63163",
+        "affectsGlobalScope": false
+      },
+      "../src/client/guihandler/typedeclerations.ts": {
+        "version": "502bb844b5178357c77cc1d15e732edbdbd9d177959bed9ccfa120c3ffd20697",
+        "affectsGlobalScope": false
+      },
+      "../src/client/guihandler/loadouthandler.ts": {
+        "version": "0f2cdb12625226dda7f1531b58518ed791ac1e6ff60af2e51d7cc2e7c9765576",
+        "affectsGlobalScope": false
+      },
+      "../src/client/guihandler/index.client.ts": {
+        "version": "4dd8b1a81f434c601f3dc3850711051deecf4079cf425de6241602a89caee1dd",
+        "affectsGlobalScope": false
+      },
+      "../src/server/gamepasshandler.ts": {
+        "version": "f3f69240dd74994f6f616de6dd826aa80889af4cafcc7f828beeacf1219efe6f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@rbxts/datastore2/index.d.ts": {
+        "version": "615f39450be9fde6bdfa5673eb98ed9e7851cce3973d8a1f50939cbe56d46106",
+        "affectsGlobalScope": false
+      },
+      "../src/server/database.ts": {
+        "version": "4aa08197cc604798242a95ebd81a088c4d619f7140de437b395eab7894b162c2",
+        "affectsGlobalScope": false
+      },
+      "../src/server/index.server.ts": {
+        "version": "42081d3fb679c881064bfb7dd24d6569d76f194ab58317835850c24cceaed6f0",
+        "affectsGlobalScope": false
+      },
+      "../types/maingui.d.ts": {
+        "version": "9ae76853aa24eea92407bb6c9fe1790019f9f954ba96024861b1e2d6bbf600fb",
+        "affectsGlobalScope": true
+      },
+      "../types/replicatedstorage.d.ts": {
+        "version": "b513f7474b9e203fcd0f1dc07ad988979208867b4cedf50e6060fb6ce31c01d6",
+        "affectsGlobalScope": true
+      },
+      "../types/startergui.d.ts": {
+        "version": "f2645b7a42cc9986d4d259082d248aa965eb04c93c846a0f1b52cdc9c8bedf58",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/types/include/generated/enums.d.ts": {
+        "version": "f664f371548e54d6c2c6e8e3bcb3fd4ceb772057cfde3cb0b75600ca186fc523",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/types/include/generated/none.d.ts": {
+        "version": "64cd8dd24457d0a76b61cb30fcd57d7142d284a6b7f9f84c03fbb64891bf697c",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/types/include/lua.d.ts": {
+        "version": "8a1360c56d322d0a52a40b5460ef1d77fb94629715c833717f7a5677478de8cd",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/types/include/macro_math.d.ts": {
+        "version": "00ad66381fdf9553e4c1e28ba3c834cd7915b99de0f474be39943a8413ba4ad3",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/types/include/roblox.d.ts": {
+        "version": "d51a37a608c302662ff3a2415a942cbaecea108fcf3a9d5896f9d8b7442c487e",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/compiler-types/types/array.d.ts": {
+        "version": "afec4c4a22fb41d97e813d437e2e4f26149c5eb3df60ee669e8673879c690961",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/compiler-types/types/callmacros.d.ts": {
+        "version": "549c07eed61c8ecbea62b2e1708ceba26dc5b5b36fd4bf22fe687ec7c5cf5be4",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/compiler-types/types/idmacros.d.ts": {
+        "version": "e75acfb6c09b682ff58d212f0436009fb3496107eabefa9b33ff3ea33c1d7191",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/compiler-types/types/iterable.d.ts": {
+        "version": "5d88b34dc8a3439278904ac69fdec3f3db8a7ffd9fa5137e14f2c4f1c44fe797",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/compiler-types/types/map.d.ts": {
+        "version": "dc1b61f860835066d3a9af55bf820477553d7722616b97b0367a880cb7ebbd26",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/compiler-types/types/promise.d.ts": {
+        "version": "e6125e84056bb634a9c9c361cc1a6529e13878abdb6ec33a65af978f24073028",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/compiler-types/types/set.d.ts": {
+        "version": "11bb1fee0b30622b31921d08a73859b8fed36b282308abec5ed702dee1912358",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/compiler-types/types/string.d.ts": {
+        "version": "83b8c1a8392ffca7bec2b37b5707fce0882529eb99649cbcfa46aef71bab5dde",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/compiler-types/types/symbol.d.ts": {
+        "version": "c86b4fc2d0018d4997ea98e27f9d0c0d8217431d5c819a3fe1b0b66b4c06e777",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/compiler-types/types/typeutils.d.ts": {
+        "version": "3e7887696a6ddb3ea1dd598165d6e1324191cc59bcd61e61d97954efdd1ea4ac",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/compiler-types/types/core.d.ts": {
+        "version": "dcf0b5f722a053716d69ea05d79729fd4adad22d4f3ef1c22a2644979880a61e",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@rbxts/t/lib/t.d.ts": {
+        "version": "b394e2aabde1e211d8def4d6cd31598b2385160bd16ab5c10f81eec19c94aba2",
+        "affectsGlobalScope": false
+      }
+    },
+    "options": {
+      "allowSyntheticDefaultImports": true,
+      "downlevelIteration": true,
+      "jsx": 2,
+      "jsxFactory": "Roact.createElement",
+      "jsxFragmentFactory": "Roact.Fragment",
+      "module": 1,
+      "moduleResolution": 2,
+      "noLib": true,
+      "resolveJsonModule": true,
+      "strict": true,
+      "target": 99,
+      "typeRoots": [
+        "../node_modules/@rbxts"
+      ],
+      "rootDir": "../src",
+      "outDir": "./",
+      "baseUrl": "../src",
+      "incremental": true,
+      "tsBuildInfoFile": "./tsconfig.tsbuildinfo",
+      "plugins": [
+        {
+          "transform": "rbxts-transformer-t"
+        }
+      ],
+      "configFilePath": "../tsconfig.json"
+    },
+    "referencedMap": {
+      "../node_modules/@rbxts/compiler-types/types/array.d.ts": [
+        "../node_modules/@rbxts/types/include/roblox.d.ts"
+      ],
+      "../node_modules/@rbxts/compiler-types/types/callmacros.d.ts": [
+        "../node_modules/@rbxts/types/include/roblox.d.ts"
+      ],
+      "../node_modules/@rbxts/compiler-types/types/core.d.ts": [
+        "../node_modules/@rbxts/compiler-types/types/array.d.ts",
+        "../node_modules/@rbxts/compiler-types/types/callmacros.d.ts",
+        "../node_modules/@rbxts/compiler-types/types/idmacros.d.ts",
+        "../node_modules/@rbxts/compiler-types/types/iterable.d.ts",
+        "../node_modules/@rbxts/compiler-types/types/map.d.ts",
+        "../node_modules/@rbxts/compiler-types/types/promise.d.ts",
+        "../node_modules/@rbxts/compiler-types/types/set.d.ts",
+        "../node_modules/@rbxts/compiler-types/types/string.d.ts",
+        "../node_modules/@rbxts/compiler-types/types/symbol.d.ts",
+        "../node_modules/@rbxts/compiler-types/types/typeutils.d.ts",
+        "../node_modules/@rbxts/types/include/roblox.d.ts"
+      ],
+      "../node_modules/@rbxts/compiler-types/types/idmacros.d.ts": [
+        "../node_modules/@rbxts/types/include/roblox.d.ts"
+      ],
+      "../node_modules/@rbxts/compiler-types/types/iterable.d.ts": [
+        "../node_modules/@rbxts/types/include/roblox.d.ts"
+      ],
+      "../node_modules/@rbxts/compiler-types/types/map.d.ts": [
+        "../node_modules/@rbxts/types/include/roblox.d.ts"
+      ],
+      "../node_modules/@rbxts/compiler-types/types/promise.d.ts": [
+        "../node_modules/@rbxts/types/include/roblox.d.ts"
+      ],
+      "../node_modules/@rbxts/compiler-types/types/set.d.ts": [
+        "../node_modules/@rbxts/types/include/roblox.d.ts"
+      ],
+      "../node_modules/@rbxts/compiler-types/types/string.d.ts": [
+        "../node_modules/@rbxts/types/include/roblox.d.ts"
+      ],
+      "../node_modules/@rbxts/compiler-types/types/symbol.d.ts": [
+        "../node_modules/@rbxts/types/include/roblox.d.ts"
+      ],
+      "../node_modules/@rbxts/compiler-types/types/typeutils.d.ts": [
+        "../node_modules/@rbxts/types/include/roblox.d.ts"
+      ],
+      "../node_modules/@rbxts/types/include/generated/enums.d.ts": [
+        "../node_modules/@rbxts/types/include/roblox.d.ts"
+      ],
+      "../node_modules/@rbxts/types/include/generated/none.d.ts": [
+        "../node_modules/@rbxts/types/include/generated/enums.d.ts",
+        "../node_modules/@rbxts/types/include/roblox.d.ts"
+      ],
+      "../node_modules/@rbxts/types/include/lua.d.ts": [
+        "../node_modules/@rbxts/compiler-types/types/core.d.ts",
+        "../node_modules/@rbxts/types/include/generated/none.d.ts"
+      ],
+      "../node_modules/@rbxts/types/include/roblox.d.ts": [
+        "../node_modules/@rbxts/compiler-types/types/core.d.ts",
+        "../node_modules/@rbxts/types/include/generated/enums.d.ts",
+        "../node_modules/@rbxts/types/include/generated/none.d.ts",
+        "../node_modules/@rbxts/types/include/lua.d.ts",
+        "../node_modules/@rbxts/types/include/macro_math.d.ts"
+      ],
+      "../src/client/guihandler/gamepassclient.ts": [
+        "../node_modules/@rbxts/services/index.d.ts",
+        "../src/shared/customisableconfig.ts"
+      ],
+      "../src/client/guihandler/index.client.ts": [
+        "../node_modules/@rbxts/services/index.d.ts",
+        "../src/client/guihandler/gamepassclient.ts",
+        "../src/client/guihandler/loadouthandler.ts",
+        "../src/client/guihandler/typedeclerations.ts"
+      ],
+      "../src/client/guihandler/loadouthandler.ts": [
+        "../node_modules/@rbxts/services/index.d.ts",
+        "../src/client/guihandler/typedeclerations.ts",
+        "../src/shared/customisableconfig.ts"
+      ],
+      "../src/client/main.client.ts": [
+        "../src/shared/module.ts"
+      ],
+      "../src/server/database.ts": [
+        "../node_modules/@rbxts/datastore2/index.d.ts",
+        "../node_modules/@rbxts/services/index.d.ts"
+      ],
+      "../src/server/gamepasshandler.ts": [
+        "../node_modules/@rbxts/services/index.d.ts"
+      ],
+      "../src/server/index.server.ts": [
+        "../node_modules/@rbxts/services/index.d.ts",
+        "../src/server/database.ts",
+        "../src/server/gamepasshandler.ts"
+      ]
+    },
+    "exportedModulesMap": {},
+    "semanticDiagnosticsPerFile": []
+  },
+  "version": "1.1.11.0.0-d7aa145c32493f548bd3954857fb5dd1ce8623efbe175a355a934eb0307aae75"
+}
