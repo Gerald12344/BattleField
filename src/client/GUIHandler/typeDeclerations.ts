@@ -42,7 +42,6 @@ export type MainGUI = ScreenGui & {
     };
     MovingFrame: Frame & {
         Shop: Frame & {
-            Gamepass: LocalScript;
             Passes: Frame & {
                 Gamepasses: TextLabel;
                 Frame: Frame;
@@ -128,9 +127,6 @@ export type MainGUI = ScreenGui & {
             };
             Grid: Frame & {
                 Uniform: Frame & {
-                    TextButton: TextButton & {
-                        LocalScript: LocalScript;
-                    };
                     Items: ScrollingFrame & {
                         Padding: Frame & {
                             UIGridLayout: UIGridLayout & {
@@ -139,46 +135,148 @@ export type MainGUI = ScreenGui & {
                         };
                     };
                     TextLabel: TextLabel;
+                    ViewportManager: LocalScript;
+                    TextButton: TextButton & {
+                        LocalScript: LocalScript;
+                    };
+                    ViewportFrame: ViewportFrame & {
+                        UICorner: UICorner;
+                        Uniform: Model & {
+                            ["Left Leg"]: Part;
+                            Humanoid: Humanoid;
+                            ["Right Leg"]: Part;
+                            ["Body Colors"]: BodyColors;
+                            ["Right Arm"]: Part;
+                            ["Left Arm"]: Part;
+                            Pants: Pants;
+                            Shirt: Shirt;
+                            Torso: Part;
+                        };
+                    };
                     Back: TextButton & {
                         LocalScript: LocalScript;
                     };
                 };
                 Perk: Frame & {
-                    Items: ScrollingFrame;
+                    Items: ScrollingFrame & {
+                        Padding: Frame & {
+                            UIGridLayout: UIGridLayout & {
+                                UIAspectRatioConstraint: UIAspectRatioConstraint;
+                            };
+                        };
+                    };
+                    TextLabel: TextLabel;
+                    ViewportManager: LocalScript;
                     TextButton: TextButton & {
                         LocalScript: LocalScript;
                     };
-                    TextLabel: TextLabel;
+                    ViewportFrame: ViewportFrame & {
+                        UICorner: UICorner;
+                        Uniform: Model & {
+                            ["Left Leg"]: Part;
+                            Humanoid: Humanoid;
+                            ["Right Leg"]: Part;
+                            ["Body Colors"]: BodyColors;
+                            ["Right Arm"]: Part;
+                            ["Left Arm"]: Part;
+                            Pants: Pants;
+                            Shirt: Shirt;
+                            Torso: Part;
+                        };
+                    };
                     Back: TextButton & {
                         LocalScript: LocalScript;
                     };
                 };
                 Primary: Frame & {
-                    Items: ScrollingFrame;
+                    Items: ScrollingFrame & {
+                        Padding: Frame & {
+                            UIGridLayout: UIGridLayout & {
+                                UIAspectRatioConstraint: UIAspectRatioConstraint;
+                            };
+                        };
+                    };
+                    TextLabel: TextLabel;
+                    ViewportManager: LocalScript;
                     TextButton: TextButton & {
                         LocalScript: LocalScript;
                     };
-                    TextLabel: TextLabel;
+                    ViewportFrame: ViewportFrame & {
+                        UICorner: UICorner;
+                        Uniform: Model & {
+                            ["Left Leg"]: Part;
+                            Humanoid: Humanoid;
+                            ["Right Leg"]: Part;
+                            ["Body Colors"]: BodyColors;
+                            ["Right Arm"]: Part;
+                            ["Left Arm"]: Part;
+                            Pants: Pants;
+                            Shirt: Shirt;
+                            Torso: Part;
+                        };
+                    };
                     Back: TextButton & {
                         LocalScript: LocalScript;
                     };
                 };
                 zEquipment: Frame & {
-                    Items: ScrollingFrame;
+                    Items: ScrollingFrame & {
+                        Padding: Frame & {
+                            UIGridLayout: UIGridLayout & {
+                                UIAspectRatioConstraint: UIAspectRatioConstraint;
+                            };
+                        };
+                    };
+                    TextLabel: TextLabel;
+                    ViewportManager: LocalScript;
                     TextButton: TextButton & {
                         LocalScript: LocalScript;
                     };
-                    TextLabel: TextLabel;
+                    ViewportFrame: ViewportFrame & {
+                        UICorner: UICorner;
+                        Uniform: Model & {
+                            ["Left Leg"]: Part;
+                            Humanoid: Humanoid;
+                            ["Right Leg"]: Part;
+                            ["Body Colors"]: BodyColors;
+                            ["Right Arm"]: Part;
+                            ["Left Arm"]: Part;
+                            Pants: Pants;
+                            Shirt: Shirt;
+                            Torso: Part;
+                        };
+                    };
                     Back: TextButton & {
                         LocalScript: LocalScript;
                     };
                 };
                 Secondary: Frame & {
+                    Items: ScrollingFrame & {
+                        Padding: Frame & {
+                            UIGridLayout: UIGridLayout & {
+                                UIAspectRatioConstraint: UIAspectRatioConstraint;
+                            };
+                        };
+                    };
+                    TextLabel: TextLabel;
+                    ViewportManager: LocalScript;
                     TextButton: TextButton & {
                         LocalScript: LocalScript;
                     };
-                    Items: ScrollingFrame;
-                    TextLabel: TextLabel;
+                    ViewportFrame: ViewportFrame & {
+                        UICorner: UICorner;
+                        Uniform: Model & {
+                            ["Left Leg"]: Part;
+                            Humanoid: Humanoid;
+                            ["Right Leg"]: Part;
+                            ["Body Colors"]: BodyColors;
+                            ["Right Arm"]: Part;
+                            ["Left Arm"]: Part;
+                            Pants: Pants;
+                            Shirt: Shirt;
+                            Torso: Part;
+                        };
+                    };
                     Back: TextButton & {
                         LocalScript: LocalScript;
                     };
@@ -195,7 +293,41 @@ export type MainGUI = ScreenGui & {
     Deploy: TextButton;
 }
 
+
+
 export type DataBaseType = object & {
     UUID: number,
     owned: boolean,
+}
+
+export type GridElement = Frame & {
+    Items: ScrollingFrame & {
+        Padding: Frame & {
+            UIGridLayout: UIGridLayout & {
+                UIAspectRatioConstraint: UIAspectRatioConstraint;
+            };
+        };
+    };
+    TextLabel: TextLabel;
+    ViewportManager: LocalScript;
+    TextButton: TextButton & {
+        LocalScript: LocalScript;
+    };
+    ViewportFrame: ViewportFrame & {
+        UICorner: UICorner;
+        Uniform: Model & {
+            ["Left Leg"]: Part;
+            Humanoid: Humanoid;
+            ["Right Leg"]: Part;
+            ["Body Colors"]: BodyColors;
+            ["Right Arm"]: Part;
+            ["Left Arm"]: Part;
+            Pants: Pants;
+            Shirt: Shirt;
+            Torso: Part;
+        };
+    };
+    Back: TextButton & {
+        LocalScript: LocalScript;
+    };
 }

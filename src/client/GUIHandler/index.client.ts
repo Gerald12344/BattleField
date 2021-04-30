@@ -1,8 +1,8 @@
 //// Written By GerldIn2016 \\--
 import { Players } from "@rbxts/services";
 import { GamepassHandler } from "./gamepassClient";
-import { BuildUniform } from "./LoadoutHandler";
-import { MainGUI } from './typeDeclerations'
+import { BuildDisplay } from "./LoadoutHandler";
+import { MainGUI } from './typeDeclerations';
 
 let init = () => {
 
@@ -25,7 +25,11 @@ let init = () => {
     GamepassHandler(Gamepass, MainFrame)
 
     //Setup Uniform Handler
-    BuildUniform(MainFrame)
+    BuildDisplay(loadout.Grid.Uniform, "Uniform")
+    BuildDisplay(loadout.Grid.Primary, "Uniform")
+    BuildDisplay(loadout.Grid.Perk, "Uniform")
+    BuildDisplay(loadout.Grid.zEquipment, "Uniform")
+    BuildDisplay(loadout.Grid.Secondary, "Uniform")
 
 
 }

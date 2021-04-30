@@ -1,10 +1,10 @@
 //// Written By GerldIn2016 \\--
 import { ReplicatedStorage } from '@rbxts/services'
 import { Uniforms } from 'shared/CustomisableConfig'
-import { MainGUI, DataBaseType } from './typeDeclerations'
+import { DataBaseType, GridElement } from './typeDeclerations'
 
-export function BuildUniform(GUI: MainGUI): void {
-    let grid = GUI.MovingFrame.Loadout.Grid.Uniform.Items.Padding
+export function BuildDisplay(Frame: GridElement, typeOfElement: string): void {
+    let grid = Frame.Items.Padding
 
     //Clear all children which should be there
     grid.GetChildren().forEach(e => {
@@ -13,11 +13,19 @@ export function BuildUniform(GUI: MainGUI): void {
         }
     })
 
-    Uniforms().forEach(element => {
+    let outputArray = typeOfElement === "Uniform" ? Uniforms : Uniforms
+    outputArray().forEach(element => {
         let childClone = ReplicatedStorage.Assets.GUI.ItemFrame.Clone()
         childClone.Parent = grid
         childClone.ViewportFrame.Uniform.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=" + element.Shirt
         childClone.ViewportFrame.Uniform.Pants.PantsTemplate = "http://www.roblox.com/asset/?id=" + element.pants
+
+        if (typeOfElement === "Uniform") {
+            let Cover = element.Cover.Clone()
+            Cover.SetPrimaryPartCFrame(childClone.ViewportFrame.Uniform.Head.CFrame)
+            Cover.Parent = childClone.ViewportFrame.Uniform
+        }
+
 
         childClone.TextLabel.Text = element.name
         childClone.Level.Text = "LEVEL " + element.level + "+"
@@ -29,7 +37,7 @@ export function BuildUniform(GUI: MainGUI): void {
 
     ReplicatedStorage.Events.ItemOwnsership.OnClientEvent.Connect((items, types) => {
         if (!(typeIs(types, "string"))) return;
-        if (types === "Uniforms") {
+        if (types === typeOfElement) {
             let dataIn = <DataBaseType[]>items
             dataIn.forEach(element => {
                 if (element.owned === false) return;

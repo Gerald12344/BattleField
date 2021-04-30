@@ -53,7 +53,6 @@ interface StarterGui extends BasePlayerGui {
 		};
 		MovingFrame: Frame & {
 			Shop: Frame & {
-				Gamepass: LocalScript;
 				Passes: Frame & {
 					Gamepasses: TextLabel;
 					Frame: Frame;
@@ -139,9 +138,6 @@ interface StarterGui extends BasePlayerGui {
 				};
 				Grid: Frame & {
 					Uniform: Frame & {
-						TextButton: TextButton & {
-							LocalScript: LocalScript;
-						};
 						Items: ScrollingFrame & {
 							Padding: Frame & {
 								UIGridLayout: UIGridLayout & {
@@ -150,46 +146,124 @@ interface StarterGui extends BasePlayerGui {
 							};
 						};
 						TextLabel: TextLabel;
+						ViewportManager: LocalScript;
+						TextButton: TextButton & {
+							LocalScript: LocalScript;
+						};
+						ViewportFrame: ViewportFrame & {
+							UICorner: UICorner;
+							Uniform: Model & {
+								["Left Leg"]: Part;
+								Humanoid: Humanoid;
+								["Right Leg"]: Part;
+								["Body Colors"]: BodyColors;
+								["Right Arm"]: Part;
+								["Left Arm"]: Part;
+								Pants: Pants;
+								Shirt: Shirt;
+								Torso: Part;
+							};
+						};
 						Back: TextButton & {
 							LocalScript: LocalScript;
 						};
 					};
 					Perk: Frame & {
 						Items: ScrollingFrame;
+						TextLabel: TextLabel;
+						ViewportManager: LocalScript;
 						TextButton: TextButton & {
 							LocalScript: LocalScript;
 						};
-						TextLabel: TextLabel;
+						ViewportFrame: ViewportFrame & {
+							UICorner: UICorner;
+							Uniform: Model & {
+								["Left Leg"]: Part;
+								Humanoid: Humanoid;
+								["Right Leg"]: Part;
+								["Body Colors"]: BodyColors;
+								["Right Arm"]: Part;
+								["Left Arm"]: Part;
+								Pants: Pants;
+								Shirt: Shirt;
+								Torso: Part;
+							};
+						};
 						Back: TextButton & {
 							LocalScript: LocalScript;
 						};
 					};
 					Primary: Frame & {
 						Items: ScrollingFrame;
+						TextLabel: TextLabel;
+						ViewportManager: LocalScript;
 						TextButton: TextButton & {
 							LocalScript: LocalScript;
 						};
-						TextLabel: TextLabel;
+						ViewportFrame: ViewportFrame & {
+							UICorner: UICorner;
+							Uniform: Model & {
+								["Left Leg"]: Part;
+								Humanoid: Humanoid;
+								["Right Leg"]: Part;
+								["Body Colors"]: BodyColors;
+								["Right Arm"]: Part;
+								["Left Arm"]: Part;
+								Pants: Pants;
+								Shirt: Shirt;
+								Torso: Part;
+							};
+						};
 						Back: TextButton & {
 							LocalScript: LocalScript;
 						};
 					};
 					zEquipment: Frame & {
 						Items: ScrollingFrame;
+						TextLabel: TextLabel;
+						ViewportManager: LocalScript;
 						TextButton: TextButton & {
 							LocalScript: LocalScript;
 						};
-						TextLabel: TextLabel;
+						ViewportFrame: ViewportFrame & {
+							UICorner: UICorner;
+							Uniform: Model & {
+								["Left Leg"]: Part;
+								Humanoid: Humanoid;
+								["Right Leg"]: Part;
+								["Body Colors"]: BodyColors;
+								["Right Arm"]: Part;
+								["Left Arm"]: Part;
+								Pants: Pants;
+								Shirt: Shirt;
+								Torso: Part;
+							};
+						};
 						Back: TextButton & {
 							LocalScript: LocalScript;
 						};
 					};
 					Secondary: Frame & {
+						Items: ScrollingFrame;
+						TextLabel: TextLabel;
+						ViewportManager: LocalScript;
 						TextButton: TextButton & {
 							LocalScript: LocalScript;
 						};
-						Items: ScrollingFrame;
-						TextLabel: TextLabel;
+						ViewportFrame: ViewportFrame & {
+							UICorner: UICorner;
+							Uniform: Model & {
+								["Left Leg"]: Part;
+								Humanoid: Humanoid;
+								["Right Leg"]: Part;
+								["Body Colors"]: BodyColors;
+								["Right Arm"]: Part;
+								["Left Arm"]: Part;
+								Pants: Pants;
+								Shirt: Shirt;
+								Torso: Part;
+							};
+						};
 						Back: TextButton & {
 							LocalScript: LocalScript;
 						};

@@ -14,27 +14,23 @@
         "affectsGlobalScope": false
       },
       "../src/shared/customisableconfig.ts": {
-        "version": "b679610c245cc9dc940400dd7140c367fd5ed697791d952677e701fdea6924ba",
-        "affectsGlobalScope": false
-      },
-      "../src/client/guihandler/gamepassclient.ts": {
-        "version": "dcdbe5e1b0d863cabdc3dcce9104665e37443b4939a14b55d91123cd09f63163",
+        "version": "e5f1a21a9b5e2f3d8f3e80656e7a97dc4b8348576c84f349b481468f6f3dd67a",
         "affectsGlobalScope": false
       },
       "../src/client/guihandler/typedeclerations.ts": {
-        "version": "502bb844b5178357c77cc1d15e732edbdbd9d177959bed9ccfa120c3ffd20697",
+        "version": "24f170c5576c6eb6c1b29e5290e4369f493ca5d1812874e89731964ea1ca4fbf",
         "affectsGlobalScope": false
       },
       "../src/client/guihandler/loadouthandler.ts": {
-        "version": "0f2cdb12625226dda7f1531b58518ed791ac1e6ff60af2e51d7cc2e7c9765576",
+        "version": "829a702b90a53064bcf3c18cc6167c629ca67aecef56702a6ae20ba84d9c7e6d",
+        "affectsGlobalScope": false
+      },
+      "../src/client/guihandler/gamepassclient.ts": {
+        "version": "c18af272df20fd4893b65971842059a99eb61cdb1c3e04641a370892787d32ca",
         "affectsGlobalScope": false
       },
       "../src/client/guihandler/index.client.ts": {
-        "version": "4dd8b1a81f434c601f3dc3850711051deecf4079cf425de6241602a89caee1dd",
-        "affectsGlobalScope": false
-      },
-      "../src/server/gamepasshandler.ts": {
-        "version": "f3f69240dd74994f6f616de6dd826aa80889af4cafcc7f828beeacf1219efe6f",
+        "version": "09dfa1dbd28b3eb9cb9e9310afcdf022209ba9543bf607f0ac65703d3f1de550",
         "affectsGlobalScope": false
       },
       "../node_modules/@rbxts/datastore2/index.d.ts": {
@@ -45,20 +41,24 @@
         "version": "4aa08197cc604798242a95ebd81a088c4d619f7140de437b395eab7894b162c2",
         "affectsGlobalScope": false
       },
+      "../src/server/gamepasshandler.ts": {
+        "version": "f3f69240dd74994f6f616de6dd826aa80889af4cafcc7f828beeacf1219efe6f",
+        "affectsGlobalScope": false
+      },
       "../src/server/index.server.ts": {
         "version": "42081d3fb679c881064bfb7dd24d6569d76f194ab58317835850c24cceaed6f0",
         "affectsGlobalScope": false
       },
       "../types/maingui.d.ts": {
-        "version": "9ae76853aa24eea92407bb6c9fe1790019f9f954ba96024861b1e2d6bbf600fb",
+        "version": "a411bd5dfdf70b7948a40b96a524157f5e509e7af6104d543dad1d4436c55d9d",
         "affectsGlobalScope": true
       },
       "../types/replicatedstorage.d.ts": {
-        "version": "b513f7474b9e203fcd0f1dc07ad988979208867b4cedf50e6060fb6ce31c01d6",
+        "version": "ccb3d0ee6a07cb7b366474a07915755cad6bdced9d2d89d34b683b6f086e5525",
         "affectsGlobalScope": true
       },
       "../types/startergui.d.ts": {
-        "version": "f2645b7a42cc9986d4d259082d248aa965eb04c93c846a0f1b52cdc9c8bedf58",
+        "version": "4ad855f6cf92695bed5c88871e2a96ce0cd2803b0840c9dd251ab3e8f9684d47",
         "affectsGlobalScope": true
       },
       "../node_modules/@rbxts/types/include/generated/enums.d.ts": {
@@ -221,6 +221,7 @@
       ],
       "../src/client/guihandler/gamepassclient.ts": [
         "../node_modules/@rbxts/services/index.d.ts",
+        "../src/client/guihandler/typedeclerations.ts",
         "../src/shared/customisableconfig.ts"
       ],
       "../src/client/guihandler/index.client.ts": [
@@ -248,6 +249,9 @@
         "../node_modules/@rbxts/services/index.d.ts",
         "../src/server/database.ts",
         "../src/server/gamepasshandler.ts"
+      ],
+      "../src/shared/customisableconfig.ts": [
+        "../node_modules/@rbxts/services/index.d.ts"
       ]
     },
     "exportedModulesMap": {},

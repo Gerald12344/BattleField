@@ -2,15 +2,15 @@
 
 import { MarketplaceService, ReplicatedStorage } from "@rbxts/services"
 import { GamepassIds } from "shared/CustomisableConfig";
-
-let ids = GamepassIds()
+import { MainGUI } from './typeDeclerations'
+let UniformIds = GamepassIds()
 
 export function GamepassHandler(shopFrame: Frame, GUI: MainGUI) {
     let Assets = ReplicatedStorage.Assets
     if (!(Assets && Assets.IsA("Folder"))) return;
     let desc = GUI.MovingFrame.Shop.Desc
 
-    ids.forEach(e => {
+    UniformIds.forEach(e => {
 
         let element = Assets.GUI.GamepassIcon.Clone()
         element.Image = "rbxassetid://" + MarketplaceService.GetProductInfo(e, 2).IconImageAssetId

@@ -5,14 +5,14 @@ local _0 = TS.import(script, TS.getModule(script, "services"))
 local MarketplaceService = _0.MarketplaceService
 local ReplicatedStorage = _0.ReplicatedStorage
 local GamepassIds = TS.import(script, game:GetService("ReplicatedStorage"), "Modules", "CustomisableConfig").GamepassIds
-local ids = GamepassIds()
+local UniformIds = GamepassIds()
 local function GamepassHandler(shopFrame, GUI)
 	local Assets = ReplicatedStorage.Assets
 	if not (Assets and Assets:IsA("Folder")) then
 		return nil
 	end
 	local desc = GUI.MovingFrame.Shop.Desc
-	local _1 = ids
+	local _1 = UniformIds
 	local _2 = function(e)
 		local element = Assets.GUI.GamepassIcon:Clone()
 		element.Image = "rbxassetid://" .. tostring(MarketplaceService:GetProductInfo(e, 2).IconImageAssetId)

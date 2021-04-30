@@ -3,7 +3,7 @@ local TS = require(game:GetService("ReplicatedStorage"):WaitForChild("rbxts_incl
 -- // Written By GerldIn2016 \\--
 local Players = TS.import(script, TS.getModule(script, "services")).Players
 local GamepassHandler = TS.import(script, script, "gamepassClient").GamepassHandler
-local BuildUniform = TS.import(script, script, "LoadoutHandler").BuildUniform
+local BuildDisplay = TS.import(script, script, "LoadoutHandler").BuildDisplay
 local init = function()
 	local localPlayer = Players.LocalPlayer
 	local GUI = localPlayer:WaitForChild("PlayerGui"):WaitForChild("MainGUI")
@@ -24,6 +24,10 @@ local init = function()
 	-- Setup GamepassHandler
 	GamepassHandler(Gamepass, MainFrame)
 	-- Setup Uniform Handler
-	BuildUniform(MainFrame)
+	BuildDisplay(loadout.Grid.Uniform, "Uniform")
+	BuildDisplay(loadout.Grid.Primary, "Uniform")
+	BuildDisplay(loadout.Grid.Perk, "Uniform")
+	BuildDisplay(loadout.Grid.zEquipment, "Uniform")
+	BuildDisplay(loadout.Grid.Secondary, "Uniform")
 end
 init()
