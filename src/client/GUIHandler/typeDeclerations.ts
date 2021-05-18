@@ -296,7 +296,7 @@ export type MainGUI = ScreenGui & {
 
 
 export type DataBaseType = object & {
-    UUID: number,
+    UUID: string,
     owned: boolean,
 }
 

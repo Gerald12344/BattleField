@@ -6,6 +6,10 @@ local ReplicatedStorage = TS.import(script, TS.getModule(script, "services")).Re
 DataStore2.Combine("DATA", "Uniforms")
 local function CheckOwnerShipOfItems(player)
 	local uniforms = DataStore2("Uniforms", player)
+	ReplicatedStorage.Events.ItemOwnsership:FireClient(player, { {
+		UUID = "1",
+		owned = true,
+	} }, "Uniforms")
 	local callRemote = function(value, data)
 		ReplicatedStorage.Events.ItemOwnsership:FireClient(player, value, data)
 	end

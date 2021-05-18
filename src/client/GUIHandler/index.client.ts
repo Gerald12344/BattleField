@@ -25,11 +25,11 @@ let init = () => {
     GamepassHandler(Gamepass, MainFrame)
 
     //Setup Uniform Handler
-    BuildDisplay(loadout.Grid.Uniform, "Uniform")
-    BuildDisplay(loadout.Grid.Primary, "Uniform")
-    BuildDisplay(loadout.Grid.Perk, "Uniform")
-    BuildDisplay(loadout.Grid.zEquipment, "Uniform")
-    BuildDisplay(loadout.Grid.Secondary, "Uniform")
+    BuildDisplay(loadout.Grid.Uniform, "Uniforms")
+    BuildDisplay(loadout.Grid.Primary, "Primary")
+    BuildDisplay(loadout.Grid.Perk, "Perk")
+    BuildDisplay(loadout.Grid.zEquipment, "zEquipment`")
+    BuildDisplay(loadout.Grid.Secondary, "Secondary")
 
 
 }

@@ -2,7 +2,7 @@
 local TS = require(game:GetService("ReplicatedStorage"):WaitForChild("rbxts_include"):WaitForChild("RuntimeLib"))
 -- // Written By GerldIn2016 \\--
 local ReplicatedStorage = TS.import(script, TS.getModule(script, "services")).ReplicatedStorage
-local Uniforms = TS.import(script, game:GetService("ReplicatedStorage"), "Modules", "CustomisableConfig").Uniforms
+local getSettings = TS.import(script, game:GetService("ReplicatedStorage"), "Modules", "CustomisableConfig").getSettings
 local function BuildDisplay(Frame, typeOfElement)
 	local grid = Frame.Items.Padding
 	-- Clear all children which should be there
@@ -17,70 +17,87 @@ local function BuildDisplay(Frame, typeOfElement)
 		_1(_3, _2 - 1, _0)
 	end
 	-- ▲ ReadonlyArray.forEach ▲
-	local _2
-	if typeOfElement == "Uniform" then
-		_2 = Uniforms
-	else
-		_2 = Uniforms
-	end
-	local outputArray = _2
-	local _3 = outputArray()
-	local _4 = function(element)
-		local childClone = ReplicatedStorage.Assets.GUI.ItemFrame:Clone()
-		childClone.Parent = grid
-		childClone.ViewportFrame.Uniform.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=" .. tostring(element.Shirt)
-		childClone.ViewportFrame.Uniform.Pants.PantsTemplate = "http://www.roblox.com/asset/?id=" .. tostring(element.pants)
-		if typeOfElement == "Uniform" then
+	local outputArray = getSettings(typeOfElement)
+	local _2 = outputArray
+	local _3 = function(element)
+		if typeOfElement == "Uniforms" and element.Cover ~= nil then
+			local childClone = ReplicatedStorage.Assets.GUI.ItemFrame:Clone()
+			childClone.Parent = grid
+			childClone.ViewportFrame.Uniform.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=" .. tostring(element.Shirt)
+			childClone.ViewportFrame.Uniform.Pants.PantsTemplate = "http://www.roblox.com/asset/?id=" .. tostring(element.pants)
 			local Cover = element.Cover:Clone()
 			Cover:SetPrimaryPartCFrame(childClone.ViewportFrame.Uniform.Head.CFrame)
 			Cover.Parent = childClone.ViewportFrame.Uniform
+			childClone.TextLabel.Text = element.name
+			childClone.Level.Text = "LEVEL " .. tostring(element.level) .. "+"
+			childClone.Name = tostring(element.UUID)
+		elseif (typeOfElement == "Primary" or typeOfElement == "Secondary") and element.Tool ~= nil then
+			local childClone = ReplicatedStorage.Assets.GUI.ToolFrame:Clone()
+			childClone.Parent = grid
+			local Weapon = element.Tool:Clone()
+			local _4 = Weapon
+			local _5 = (CFrame.new(0, 0, 0))
+			local _6 = CFrame.Angles(0, math.rad(0), 0)
+			_4:SetPrimaryPartCFrame((_5 * _6):Inverse())
+			Weapon.Parent = childClone.ViewportFrame
+			Weapon.Name = "Tool"
+			childClone.TextLabel.Text = element.name
+			childClone.Level.Text = "LEVEL " .. tostring(element.level) .. "+"
+			childClone.Name = tostring(element.UUID)
 		end
-		childClone.TextLabel.Text = element.name
-		childClone.Level.Text = "LEVEL " .. tostring(element.level) .. "+"
-		childClone.Name = tostring(element.UUID)
 	end
 	-- ▼ ReadonlyArray.forEach ▼
-	for _5, _6 in ipairs(_3) do
-		_4(_6, _5 - 1, _3)
+	for _4, _5 in ipairs(_2) do
+		_3(_5, _4 - 1, _2)
 	end
 	-- ▲ ReadonlyArray.forEach ▲
 	ReplicatedStorage.Events.ItemOwnsership.OnClientEvent:Connect(function(items, types)
-		local _5 = types
-		if not (type(_5) == "string") then
+		print("herereerr")
+		print(types)
+		print(typeOfElement)
+		local _4 = types
+		if not (type(_4) == "string") then
 			return nil
 		end
 		if types == typeOfElement then
 			local dataIn = items
-			local _6 = dataIn
-			local _7 = function(element)
+			local _5 = dataIn
+			local _6 = function(element)
 				if element.owned == false then
 					return nil
 				end
+				print(element.UUID)
 				local ITEM = grid:FindFirstChild(element.UUID)
+				local _7 = ITEM
+				if _7 ~= nil then
+					_7 = _7:FindFirstChild("TextLabel")
+				end
+				local TextLabel = _7
 				local _8 = ITEM
 				if _8 ~= nil then
-					_8 = _8:FindFirstChild("TextLabel")
+					_8 = _8:FindFirstChild("Level")
 				end
-				local TextLabel = _8
+				local LevelReq = _8
 				local _9 = ITEM
 				if _9 ~= nil then
-					_9 = _9:FindFirstChild("Level")
+					_9 = _9:FindFirstChild("ViewportFrame")
 				end
-				local LevelReq = _9
+				local Image = _9
 				local _10 = ITEM
 				if _10 ~= nil then
-					_10 = _10:FindFirstChild("ViewportFrame")
+					_10 = _10:FindFirstChild("Icon")
 				end
-				local Image = _10
-				if TextLabel and TextLabel:IsA("TextLabel") and LevelReq and Image and LevelReq:IsA("TextLabel") and Image:IsA("ViewportFrame") then
+				local PadlocItem = _10
+				if TextLabel and TextLabel:IsA("TextLabel") and LevelReq and Image and LevelReq:IsA("TextLabel") and Image:IsA("ViewportFrame") and PadlocItem and PadlocItem:IsA("ImageLabel") then
 					TextLabel.TextTransparency = 0
 					LevelReq.TextTransparency = 0
 					Image.ImageTransparency = 0
+					PadlocItem.Visible = false
 				end
 			end
 			-- ▼ ReadonlyArray.forEach ▼
-			for _8, _9 in ipairs(_6) do
-				_7(_9, _8 - 1, _6)
+			for _7, _8 in ipairs(_5) do
+				_6(_8, _7 - 1, _5)
 			end
 			-- ▲ ReadonlyArray.forEach ▲
 		end

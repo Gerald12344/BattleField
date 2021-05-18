@@ -1,6 +1,7 @@
 interface ReplicatedStorage extends Instance {
 	Modules: Folder & {
 		module: ModuleScript;
+		sharedTypes: ModuleScript;
 		CustomisableConfig: ModuleScript;
 	};
 	Assets: Folder & {
@@ -31,17 +32,24 @@ interface ReplicatedStorage extends Instance {
 			};
 		};
 		GUI: Folder & {
-			GamepassIcon: ImageButton & {
-				UICorner: UICorner;
-				UIAspectRatioConstraint: UIAspectRatioConstraint;
-			};
-			ItemFrame: TextButton & {
+			ToolFrame: TextButton & {
+				ViewportFrame: ViewportFrame & {
+					UICorner: UICorner;
+				};
 				TextLabel: TextLabel;
 				ViewportManager: LocalScript;
 				UICorner: UICorner;
 				Level: TextLabel & {
 					UICorner: UICorner;
 				};
+				Icon: ImageLabel;
+				TextButton: TextButton;
+			};
+			GamepassIcon: ImageButton & {
+				UICorner: UICorner;
+				UIAspectRatioConstraint: UIAspectRatioConstraint;
+			};
+			ItemFrame: TextButton & {
 				ViewportFrame: ViewportFrame & {
 					UICorner: UICorner;
 					Uniform: Model & {
@@ -69,7 +77,32 @@ interface ReplicatedStorage extends Instance {
 						Shirt: Shirt;
 					};
 				};
+				TextLabel: TextLabel;
+				ViewportManager: LocalScript;
+				UICorner: UICorner;
+				Level: TextLabel & {
+					UICorner: UICorner;
+				};
+				Icon: ImageLabel;
 				TextButton: TextButton;
+			};
+		};
+		Weaponary: Folder & {
+			M1911: Model & {
+				BoltBack: MeshPart;
+				Mag: MeshPart;
+				shell: UnionOperation;
+				["Slide Stop"]: MeshPart;
+				Bolt: MeshPart;
+			};
+			M1A1: Model & {
+				Metalbar: MeshPart;
+				Center: Part;
+				Wood: MeshPart;
+				Mag: MeshPart;
+				Metalpart: MeshPart;
+				Metalchunk: MeshPart;
+				Bolt: MeshPart;
 			};
 		};
 	};
