@@ -9,24 +9,28 @@
         "version": "8c875200e240dad46ccf5f7ac9d923d39c0919cc66f2cf920e4c13cdc3e88a87",
         "affectsGlobalScope": false
       },
-      "../node_modules/@rbxts/services/index.d.ts": {
-        "version": "f5b521519568e3dcb6f8cf871438e29aa5f7968a017be88929983a43b801451b",
+      "../src/shared/sharedtypes.ts": {
+        "version": "af835e58717163f01bf3976c4a6ae713f3a694e043abc9b361628106133ca4eb",
         "affectsGlobalScope": false
       },
-      "../src/shared/sharedtypes.ts": {
-        "version": "d990db02a5cc63f7ce46200ed141b43df1a456819eff5ffda253f6eb53e4b4cd",
+      "../src/client/guihandler/typedeclerations.ts": {
+        "version": "74bf77b6b727bffc1954db44d3d035ac7764b7466609878ac0d98b44fefb4951",
+        "affectsGlobalScope": false
+      },
+      "../src/client/guihandler/clickloadoutitem.ts": {
+        "version": "3d538e9710c781f42d3f384074bb838deec3807d8dc27d5f6255468dd0ae2fdf",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@rbxts/services/index.d.ts": {
+        "version": "f5b521519568e3dcb6f8cf871438e29aa5f7968a017be88929983a43b801451b",
         "affectsGlobalScope": false
       },
       "../src/shared/customisableconfig.ts": {
         "version": "ebd89efd2553a95f7a5b10863dabf60c55056eabf2354e47eb38a4a0ce466d94",
         "affectsGlobalScope": false
       },
-      "../src/client/guihandler/typedeclerations.ts": {
-        "version": "95453ba58b82295f69bdeb3720dedffd093b52d883ac3605e5d4f0a76c8f450f",
-        "affectsGlobalScope": false
-      },
       "../src/client/guihandler/loadouthandler.ts": {
-        "version": "1730b067a03cb3673f4f876b14620f309f1062b4f71c550ec4047396e8241034",
+        "version": "0a620fa6ae782355806e17142908e50e1eb10cf47a8936856f3dcfa0bdd14a9e",
         "affectsGlobalScope": false
       },
       "../src/client/guihandler/gamepassclient.ts": {
@@ -227,6 +231,10 @@
         "../node_modules/@rbxts/types/include/lua.d.ts",
         "../node_modules/@rbxts/types/include/macro_math.d.ts"
       ],
+      "../src/client/guihandler/clickloadoutitem.ts": [
+        "../src/client/guihandler/typedeclerations.ts",
+        "../src/shared/sharedtypes.ts"
+      ],
       "../src/client/guihandler/gamepassclient.ts": [
         "../node_modules/@rbxts/services/index.d.ts",
         "../src/client/guihandler/typedeclerations.ts",
@@ -240,6 +248,7 @@
       ],
       "../src/client/guihandler/loadouthandler.ts": [
         "../node_modules/@rbxts/services/index.d.ts",
+        "../src/client/guihandler/clickloadoutitem.ts",
         "../src/client/guihandler/typedeclerations.ts",
         "../src/shared/customisableconfig.ts"
       ],

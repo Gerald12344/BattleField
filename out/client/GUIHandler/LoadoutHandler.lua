@@ -3,6 +3,7 @@ local TS = require(game:GetService("ReplicatedStorage"):WaitForChild("rbxts_incl
 -- // Written By GerldIn2016 \\--
 local ReplicatedStorage = TS.import(script, TS.getModule(script, "services")).ReplicatedStorage
 local getSettings = TS.import(script, game:GetService("ReplicatedStorage"), "Modules", "CustomisableConfig").getSettings
+local SetupClickHandlerForLoadout = TS.import(script, script.Parent, "ClickLoadoutItem").SetupClickHandlerForLoadout
 local function BuildDisplay(Frame, typeOfElement)
 	local grid = Frame.Items.Padding
 	-- Clear all children which should be there
@@ -20,8 +21,9 @@ local function BuildDisplay(Frame, typeOfElement)
 	local outputArray = getSettings(typeOfElement)
 	local _2 = outputArray
 	local _3 = function(element)
+		local childClone
 		if typeOfElement == "Uniforms" and element.Cover ~= nil then
-			local childClone = ReplicatedStorage.Assets.GUI.ItemFrame:Clone()
+			childClone = ReplicatedStorage.Assets.GUI.ItemFrame:Clone()
 			childClone.Parent = grid
 			childClone.ViewportFrame.Uniform.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=" .. tostring(element.Shirt)
 			childClone.ViewportFrame.Uniform.Pants.PantsTemplate = "http://www.roblox.com/asset/?id=" .. tostring(element.pants)
@@ -32,7 +34,7 @@ local function BuildDisplay(Frame, typeOfElement)
 			childClone.Level.Text = "LEVEL " .. tostring(element.level) .. "+"
 			childClone.Name = tostring(element.UUID)
 		elseif (typeOfElement == "Primary" or typeOfElement == "Secondary") and element.Tool ~= nil then
-			local childClone = ReplicatedStorage.Assets.GUI.ToolFrame:Clone()
+			childClone = ReplicatedStorage.Assets.GUI.ToolFrame:Clone()
 			childClone.Parent = grid
 			local Weapon = element.Tool:Clone()
 			local _4 = Weapon
@@ -44,7 +46,16 @@ local function BuildDisplay(Frame, typeOfElement)
 			childClone.TextLabel.Text = element.name
 			childClone.Level.Text = "LEVEL " .. tostring(element.level) .. "+"
 			childClone.Name = tostring(element.UUID)
+		else
+			childClone = ReplicatedStorage.Assets.GUI.ToolFrame:Clone()
+			childClone.Parent = grid
+			childClone.TextLabel.Text = element.name
+			childClone.Level.Text = "LEVEL " .. tostring(element.level) .. "+"
+			childClone.Name = tostring(element.UUID)
 		end
+		childClone.MouseButton1Down:Connect(function()
+			SetupClickHandlerForLoadout(element, Frame, typeOfElement)
+		end)
 	end
 	-- ▼ ReadonlyArray.forEach ▼
 	for _4, _5 in ipairs(_2) do

@@ -298,7 +298,9 @@ export type MainGUI = ScreenGui & {
 export type DataBaseType = object & {
     UUID: string,
     owned: boolean,
+
 }
+
 
 export type GridElement = Frame & {
     Items: ScrollingFrame & {
@@ -331,3 +333,4 @@ export type GridElement = Frame & {
         LocalScript: LocalScript;
     };
 }
+

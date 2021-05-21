@@ -2,6 +2,7 @@
 import { ReplicatedStorage } from '@rbxts/services'
 import { getSettings } from 'shared/CustomisableConfig'
 import { DataBaseType, GridElement } from './typeDeclerations'
+import { SetupClickHandlerForLoadout } from './ClickLoadoutItem'
 
 export function BuildDisplay(Frame: GridElement, typeOfElement: string): void {
     let grid = Frame.Items.Padding
@@ -15,8 +16,9 @@ export function BuildDisplay(Frame: GridElement, typeOfElement: string): void {
 
     let outputArray = getSettings(typeOfElement)
     outputArray.forEach(element => {
+        let childClone
         if (typeOfElement === "Uniforms" && element.Cover !== undefined) {
-            let childClone = ReplicatedStorage.Assets.GUI.ItemFrame.Clone()
+            childClone = ReplicatedStorage.Assets.GUI.ItemFrame.Clone()
             childClone.Parent = grid
             childClone.ViewportFrame.Uniform.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=" + element.Shirt
             childClone.ViewportFrame.Uniform.Pants.PantsTemplate = "http://www.roblox.com/asset/?id=" + element.pants
@@ -33,7 +35,7 @@ export function BuildDisplay(Frame: GridElement, typeOfElement: string): void {
             childClone.Name = `${element.UUID}`
         }
         else if ((typeOfElement === "Primary" || typeOfElement === "Secondary") && element.Tool !== undefined) {
-            let childClone = ReplicatedStorage.Assets.GUI.ToolFrame.Clone()
+            childClone = ReplicatedStorage.Assets.GUI.ToolFrame.Clone()
             childClone.Parent = grid
 
 
@@ -47,8 +49,19 @@ export function BuildDisplay(Frame: GridElement, typeOfElement: string): void {
             childClone.Level.Text = "LEVEL " + element.level + "+"
 
             childClone.Name = `${element.UUID}`
+        } else {
+            childClone = ReplicatedStorage.Assets.GUI.ToolFrame.Clone()
+            childClone.Parent = grid
+            childClone.TextLabel.Text = element.name
+            childClone.Level.Text = "LEVEL " + element.level + "+"
+
+            childClone.Name = `${element.UUID}`
         }
 
+        childClone.MouseButton1Down.Connect(() => {
+
+            SetupClickHandlerForLoadout(element, Frame, typeOfElement)
+        })
 
     });
 
