@@ -1,11 +1,12 @@
 //// Written By GerldIn2016 \\--
 
 import { Players } from "@rbxts/services";
-import { CheckOwnerShipOfItems } from "./database";
+import { CheckOwnerShip, CheckOwnerShipOfItems } from "./database";
 import { purchaseGamepassHandler } from "./gamepassHandler";
 
 //Start running misc scripts
 purchaseGamepassHandler()
+CheckOwnerShip()
 
 Players.PlayerAdded.Connect((plr) => {
 

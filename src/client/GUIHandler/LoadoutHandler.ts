@@ -58,35 +58,31 @@ export function BuildDisplay(Frame: GridElement, typeOfElement: string): void {
             childClone.Name = `${element.UUID}`
         }
 
-        childClone.MouseButton1Down.Connect(() => {
-
+        childClone.TextButton.MouseButton1Down.Connect(() => {
             SetupClickHandlerForLoadout(element, Frame, typeOfElement)
         })
 
     });
 
     ReplicatedStorage.Events.ItemOwnsership.OnClientEvent.Connect((items, types) => {
-        print("herereerr")
-        print(types)
-        print(typeOfElement)
+
         if (!(typeIs(types, "string"))) return;
-        if (types === typeOfElement) {
-            let dataIn = <DataBaseType[]>items
-            dataIn.forEach(element => {
-                if (element.owned === false) return;
-                print(element.UUID)
-                let ITEM = grid.FindFirstChild(element.UUID)
-                let TextLabel = ITEM?.FindFirstChild("TextLabel")
-                let LevelReq = ITEM?.FindFirstChild("Level")
-                let Image = ITEM?.FindFirstChild("ViewportFrame")
-                let PadlocItem = ITEM?.FindFirstChild("Icon")
-                if (TextLabel && TextLabel.IsA("TextLabel") && LevelReq && Image && LevelReq.IsA("TextLabel") && Image.IsA("ViewportFrame") && PadlocItem && PadlocItem.IsA("ImageLabel")) {
-                    TextLabel.TextTransparency = 0
-                    LevelReq.TextTransparency = 0
-                    Image.ImageTransparency = 0
-                    PadlocItem.Visible = false
-                }
-            });
-        }
+        let dataIn = <DataBaseType[]>items
+        dataIn.forEach(element => {
+            if (element.owned === false) return;
+            print(element.UUID)
+            let ITEM = grid.FindFirstChild(element.UUID)
+            let TextLabel = ITEM?.FindFirstChild("TextLabel")
+            let LevelReq = ITEM?.FindFirstChild("Level")
+            let Image = ITEM?.FindFirstChild("ViewportFrame")
+            let PadlocItem = ITEM?.FindFirstChild("Icon")
+            if (TextLabel && TextLabel.IsA("TextLabel") && LevelReq && Image && LevelReq.IsA("TextLabel") && Image.IsA("ViewportFrame") && PadlocItem && PadlocItem.IsA("ImageLabel")) {
+                TextLabel.TextTransparency = 0
+                LevelReq.TextTransparency = 0
+                Image.ImageTransparency = 0
+                PadlocItem.Visible = false
+            }
+        });
+
     })
 }
