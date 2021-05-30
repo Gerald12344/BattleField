@@ -53,7 +53,7 @@ local function BuildDisplay(Frame, typeOfElement)
 			childClone.Level.Text = "LEVEL " .. tostring(element.level) .. "+"
 			childClone.Name = tostring(element.UUID)
 		end
-		childClone.MouseButton1Down:Connect(function()
+		childClone.TextButton.MouseButton1Down:Connect(function()
 			SetupClickHandlerForLoadout(element, Frame, typeOfElement)
 		end)
 	end
@@ -63,55 +63,50 @@ local function BuildDisplay(Frame, typeOfElement)
 	end
 	-- ▲ ReadonlyArray.forEach ▲
 	ReplicatedStorage.Events.ItemOwnsership.OnClientEvent:Connect(function(items, types)
-		print("herereerr")
-		print(types)
-		print(typeOfElement)
 		local _4 = types
 		if not (type(_4) == "string") then
 			return nil
 		end
-		if types == typeOfElement then
-			local dataIn = items
-			local _5 = dataIn
-			local _6 = function(element)
-				if element.owned == false then
-					return nil
-				end
-				print(element.UUID)
-				local ITEM = grid:FindFirstChild(element.UUID)
-				local _7 = ITEM
-				if _7 ~= nil then
-					_7 = _7:FindFirstChild("TextLabel")
-				end
-				local TextLabel = _7
-				local _8 = ITEM
-				if _8 ~= nil then
-					_8 = _8:FindFirstChild("Level")
-				end
-				local LevelReq = _8
-				local _9 = ITEM
-				if _9 ~= nil then
-					_9 = _9:FindFirstChild("ViewportFrame")
-				end
-				local Image = _9
-				local _10 = ITEM
-				if _10 ~= nil then
-					_10 = _10:FindFirstChild("Icon")
-				end
-				local PadlocItem = _10
-				if TextLabel and TextLabel:IsA("TextLabel") and LevelReq and Image and LevelReq:IsA("TextLabel") and Image:IsA("ViewportFrame") and PadlocItem and PadlocItem:IsA("ImageLabel") then
-					TextLabel.TextTransparency = 0
-					LevelReq.TextTransparency = 0
-					Image.ImageTransparency = 0
-					PadlocItem.Visible = false
-				end
+		local dataIn = items
+		local _5 = dataIn
+		local _6 = function(element)
+			if element.owned == false then
+				return nil
 			end
-			-- ▼ ReadonlyArray.forEach ▼
-			for _7, _8 in ipairs(_5) do
-				_6(_8, _7 - 1, _5)
+			print(element.UUID)
+			local ITEM = grid:FindFirstChild(element.UUID)
+			local _7 = ITEM
+			if _7 ~= nil then
+				_7 = _7:FindFirstChild("TextLabel")
 			end
-			-- ▲ ReadonlyArray.forEach ▲
+			local TextLabel = _7
+			local _8 = ITEM
+			if _8 ~= nil then
+				_8 = _8:FindFirstChild("Level")
+			end
+			local LevelReq = _8
+			local _9 = ITEM
+			if _9 ~= nil then
+				_9 = _9:FindFirstChild("ViewportFrame")
+			end
+			local Image = _9
+			local _10 = ITEM
+			if _10 ~= nil then
+				_10 = _10:FindFirstChild("Icon")
+			end
+			local PadlocItem = _10
+			if TextLabel and TextLabel:IsA("TextLabel") and LevelReq and Image and LevelReq:IsA("TextLabel") and Image:IsA("ViewportFrame") and PadlocItem and PadlocItem:IsA("ImageLabel") then
+				TextLabel.TextTransparency = 0
+				LevelReq.TextTransparency = 0
+				Image.ImageTransparency = 0
+				PadlocItem.Visible = false
+			end
 		end
+		-- ▼ ReadonlyArray.forEach ▼
+		for _7, _8 in ipairs(_5) do
+			_6(_8, _7 - 1, _5)
+		end
+		-- ▲ ReadonlyArray.forEach ▲
 	end)
 end
 return {

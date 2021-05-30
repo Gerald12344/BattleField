@@ -10,6 +10,8 @@ export type SettingsType = object &
     Tool?: Model;
     Gadet?: Model;
     Perk?: String;
+    group?: number;
+    rank?: number;
   }[];
 
 export type SettingsTypeObject = object &
@@ -24,4 +26,6 @@ export type SettingsTypeObject = object &
   Tool?: Model;
   Gadet?: Model;
   Perk?: String;
+  group?: number;
+  rank?: number;
 }

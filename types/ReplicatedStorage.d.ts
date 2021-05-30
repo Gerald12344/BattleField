@@ -6,6 +6,24 @@ interface ReplicatedStorage extends Instance {
 	};
 	Assets: Folder & {
 		Helmets: Folder & {
+			DevHelm: Model & {
+				Helmet: MeshPart;
+				Buckle2: MeshPart;
+				["Meshes/StrapHelm"]: MeshPart;
+				Bales: MeshPart;
+				ChinStrap: MeshPart;
+				Liner: MeshPart;
+				Middle: Part & {
+					Mesh: SpecialMesh;
+				};
+				Buckle: MeshPart;
+			};
+			ArmyFieldCap: Model & {
+				Middle: Part & {
+					Mesh: SpecialMesh;
+				};
+				Cap: MeshPart;
+			};
 			ArmyMP: Model & {
 				Union: UnionOperation;
 				P: UnionOperation;
@@ -15,6 +33,14 @@ interface ReplicatedStorage extends Instance {
 					Mesh: SpecialMesh;
 				};
 				Linen: MeshPart;
+			};
+			SFBeret: Model & {
+				Brim: MeshPart;
+				Union: UnionOperation;
+				Beret: MeshPart;
+				Middle: Part & {
+					Mesh: SpecialMesh;
+				};
 			};
 			M1Helmet: Model & {
 				Helmet: MeshPart & {
@@ -29,6 +55,22 @@ interface ReplicatedStorage extends Instance {
 					Mesh: SpecialMesh;
 				};
 				Buckle: MeshPart;
+			};
+			ASFBoonie: Model & {
+				BoonieCap: UnionOperation;
+				Middle: Part & {
+					Mesh: SpecialMesh;
+					Decal: Decal;
+				};
+			};
+			GeneralCap: Model & {
+				Shades: Part & {
+					Mesh: SpecialMesh;
+				};
+				Cap: MeshPart;
+				Middle: Part & {
+					Mesh: SpecialMesh;
+				};
 			};
 		};
 		GUI: Folder & {
@@ -107,8 +149,9 @@ interface ReplicatedStorage extends Instance {
 		};
 	};
 	Events: Folder & {
-		ItemOwnsership: RemoteEvent;
 		PromptPurchase: RemoteEvent;
+		CheckOwnership: RemoteFunction;
+		ItemOwnsership: RemoteEvent;
 	};
 	rbxts_include: Folder & {
 		RuntimeLib: ModuleScript;

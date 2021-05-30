@@ -11,6 +11,7 @@ export function GamepassIds(): number[] {
 
 export function getSettings(settings: String): SettingsType {
     let uniforms: SettingsType = [
+
         { name: "Basic Combat Uniform", Shirt: 6826400344, pants: 6826417710, price: 0, level: 0, group: 10578961, rank: 1, Cover: CoverStore.M1Helmet, Gear: GearStore.BasicWebbing, UUID: 1 },
         { name: "[LVL 5+] Combat Uniform", Shirt: 6826399535, pants: 6826417710, price: 0, level: 5, group: 10578961, rank: 1, Cover: CoverStore.M1Helmet, Gear: GearStore.NCOWebbing, UUID: 2 },
         { name: "[LVL 10+] Combat Uniform", Shirt: 6826399535, pants: 6826417710, price: 0, level: 10, group: 10578961, rank: 1, Cover: CoverStore.ArmyFieldCap, Gear: GearStore.BasicWebbing, UUID: 3 },
@@ -35,5 +36,5 @@ export function getSettings(settings: String): SettingsType {
         { name: "Ranger Pew Pew Pistol", price: 100, level: 5, Tool: WeaponStore.M1911, UUID: 10 },
     ]
 
-    return settings === "Uniforms" ? uniforms : settings === "Primary" ? Primary : settings === "Secondary" ? Secondary : Secondary
+    return settings === "Uniforms" ? uniforms : settings === "Primary" ? Primary : settings === "Secondary" ? Secondary : settings === "all" ? [...uniforms, ...Primary, ...Secondary] : Secondary
 }
