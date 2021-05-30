@@ -26,11 +26,11 @@
         "affectsGlobalScope": false
       },
       "../src/shared/customisableconfig.ts": {
-        "version": "7dfdb124eeaf5658c4f4afea7d1cba0014f03ca6160309151109559c9694aadd",
+        "version": "663e19d75e8df9d8b8c7ddae8f603858c1e8455f8bbc5e74ed4ffcf2e9b28efa",
         "affectsGlobalScope": false
       },
       "../src/client/guihandler/loadouthandler.ts": {
-        "version": "de49bc8243a6f149c6e00724f9d23243032add1640050dcfcaabcbca32c0c316",
+        "version": "c1c4269f2f8b02f07e85f797bf0ec7c481a11153dc38b654259bdf44d1eeadaa",
         "affectsGlobalScope": false
       },
       "../src/client/guihandler/gamepassclient.ts": {

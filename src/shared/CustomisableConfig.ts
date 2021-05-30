@@ -11,7 +11,7 @@ export function GamepassIds(): number[] {
 
 export function getSettings(settings: String): SettingsType {
     let uniforms: SettingsType = [
-        { name: "Basic Combat Uniform", Shirt: 6826400344, pants: 6826417710, price: 0, level: 0, group: 999, rank: 999, Cover: CoverStore.M1Helmet, UUID: 1 },
+        { name: "Basic Combat Uniform", Shirt: 6826400344, pants: 6826417710, price: 0, level: 0, group: 5138739, rank: 1, Cover: CoverStore.M1Helmet, UUID: 1 },
         { name: "[LVL 5+] Combat Uniform", Shirt: 6826399535, pants: 6826417710, price: 0, level: 5, group: 999, rank: 999, Cover: CoverStore.M1Helmet, UUID: 2 },
         { name: "[LVL 10+] Combat Uniform", Shirt: 6826399535, pants: 6826417710, price: 0, level: 10, group: 999, rank: 999, Cover: CoverStore.ArmyFieldCap, UUID: 3 },
         { name: "Military Police Uniform", Shirt: 6826402010, pants: 6826417710, price: 0, level: 0, Cover: CoverStore.ArmyMP, UUID: 4 },

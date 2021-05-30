@@ -14,8 +14,8 @@ local function getSettings(settings)
 		pants = 6826417710,
 		price = 0,
 		level = 0,
-		group = 999,
-		rank = 999,
+		group = 5138739,
+		rank = 1,
 		Cover = CoverStore.M1Helmet,
 		UUID = 1,
 	}, {

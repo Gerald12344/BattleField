@@ -1,5 +1,5 @@
 //// Written By GerldIn2016 \\--
-import { ReplicatedStorage } from '@rbxts/services'
+import { Players, ReplicatedStorage } from '@rbxts/services'
 import { getSettings } from 'shared/CustomisableConfig'
 import { DataBaseType, GridElement } from './typeDeclerations'
 import { SetupClickHandlerForLoadout } from './ClickLoadoutItem'
@@ -56,6 +56,14 @@ export function BuildDisplay(Frame: GridElement, typeOfElement: string): void {
             childClone.Level.Text = "LEVEL " + element.level + "+"
 
             childClone.Name = `${element.UUID}`
+        }
+
+        if (element.group && element.rank && element.group !== -1 && Players.LocalPlayer.GetRankInGroup(element.group) >= element.rank) {
+            childClone.Icon.Visible = false
+            childClone.TextLabel.TextTransparency = 0
+            childClone.Level.TextTransparency = 0
+            childClone.ViewportFrame.ImageTransparency = 0
+
         }
 
         childClone.TextButton.MouseButton1Down.Connect(() => {
